@@ -107,7 +107,7 @@ def main():
     # Time iteration preprocessing
     SU2Driver.Preprocess(TimeIter)
     # Define the homogeneous unsteady wall temperature on the structure (user defined)
-    WallTemp = 293.0 + 57.0*sin(2*pi*time)
+    WallTemp = 293.0 + 300*sin(2*pi*time)
     # Set this temperature to all the vertices on the specified CHT marker
     for iVertex in range(nVertex_CHTMarker):
       SU2Driver.SetMarkerCustomTemperature(CHTMarkerID, iVertex, WallTemp)
